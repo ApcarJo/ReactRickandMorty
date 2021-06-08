@@ -36,6 +36,7 @@ const Profile = () => {
 
     const getCharacters = async () => {
         try{
+            // let res = await axios.get('https://rickandmortyapi.com/api/character');
             let res = await axios.get('https://rickandmortyapi.com/api/character');
             setCharacters(res.data.results);
 
