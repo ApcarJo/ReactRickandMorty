@@ -1,0 +1,14 @@
+
+.boton {
+    height: 3em;
+    width: 5em;
+
+    background-color: blue;
+    transition: 0.3s;
+    border-radius: 0.5em;
+}
+
+.boton:hover{
+    background-color: darkblue;
+    transition: 0.5s;
+}
