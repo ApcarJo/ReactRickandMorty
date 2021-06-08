@@ -38,20 +38,20 @@ const Profile = () => {
         try{
             let res = await axios.get('https://rickandmortyapi.com/api/character');
             setCharacters(res.data.results);
-            
+
         }catch (err){
             console.log({message: err.message});
         }
     }
 
     if (characters[0]?.id){
-
-        return(<div>{characters.map((person, index)=>(
-        <div className="card" onClick={()=>clickHandler(person)}>
-            <p>{person.name}</p><img src={person.image} alt="movida" key={index}/>
-        </div>))}
+        return(<div>
+            {characters.map((person, index)=>(
+                <div className="card" onClick={()=>clickHandler(person)}>
+                    <p>{person.name}</p><img src={person.image} alt="movida" key={index}/>
+                </div>
+            ))}
         </div>)
-
     }else {
     return(
         <div>Soy profile</div>
