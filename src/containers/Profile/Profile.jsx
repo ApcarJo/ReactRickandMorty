@@ -38,8 +38,9 @@ const Profile = () => {
         try{
             let res = await axios.get('https://rickandmortyapi.com/api/character');
             setCharacters(res.data.results);
-        }catch{
-
+            
+        }catch (err){
+            console.log({message: err.message});
         }
     }
 
